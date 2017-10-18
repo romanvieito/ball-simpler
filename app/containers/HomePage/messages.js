@@ -6,6 +6,14 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
+  mainHeader: {
+    id: 'containers.HomePage.main.header',
+    defaultMessage: 'Baseball',
+  },
+  mainDescription: {
+    id: 'containers.HomePage.main.description',
+    defaultMessage: 'Baseball',
+  },
   startProjectHeader: {
     id: 'boilerplate.containers.HomePage.start_project.header',
     defaultMessage: 'Start your next react project in seconds',
