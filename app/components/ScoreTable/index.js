@@ -5,12 +5,13 @@ import React from 'react';
 // import LocaleToggle from 'containers/LocaleToggle';
 import Wrapper from './Wrapper';
 import Score from './Score';
+import './score.css';
 // import messages from './messages';
 
 function ScoreTable() {
   return (
     <Wrapper>
-      <section>
+      <section style={divStyle}>
         <div className="wrapper">
           <div className="innings">
             <table className="table table-sm">
@@ -94,5 +95,9 @@ function ScoreTable() {
     </Wrapper>
   );
 }
+
+const divStyle = {
+  width: '70%',
+};
 
 export default ScoreTable;
