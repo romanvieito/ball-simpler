@@ -16,12 +16,14 @@ import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H2 from 'components/H2';
+import ScoreTable from 'components/ScoreTable';
+
 // import ReposList from 'components/ReposList';
 // import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 // import Form from './Form';
 // import Input from './Input';
-// import Section from './Section';
+import Section from './Section';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
@@ -62,6 +64,9 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
               <FormattedMessage {...messages.mainDescription} />
             </p>
           </CenteredSection>
+          <Section>
+            <ScoreTable></ScoreTable>
+          </Section>
           {/* <Section>
             <H2>
               <FormattedMessage {...messages.trymeHeader} />
