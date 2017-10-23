@@ -1,0 +1,15 @@
+.wrapper {
+    width: 100%;
+    border: 1px gray;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+.innings {
+    width: 80%;
+    float:left; /* add this */
+    border: 1px gray;
+}
+.scores {
+    padding-left: 1%;
+    border: 1px gray;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
