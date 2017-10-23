@@ -17,6 +17,7 @@ import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H2 from 'components/H2';
 import ScoreTable from 'components/ScoreTable';
+import Dices from 'components/Dices';
 
 // import ReposList from 'components/ReposList';
 // import AtPrefix from './AtPrefix';
@@ -66,6 +67,9 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           </CenteredSection>
           <Section>
             <ScoreTable></ScoreTable>
+          </Section>
+          <Section>
+            <Dices></Dices>
           </Section>
           {/* <Section>
             <H2>
