@@ -22,6 +22,7 @@ function Dices() {
       <section>
         <Btn>Roll</Btn>
         <NormalImg src={DiceImg1} alt="1" />
+        <NormalImg className="margin-left-2p" src={DiceImg1} alt="1" />
       </section>
     </Wrapper>
   );
