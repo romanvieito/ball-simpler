@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 // import { FormattedMessage } from 'react-intl';
 import NormalImg from 'components/Img';
 import Btn from 'components/Button';
@@ -16,16 +18,20 @@ import DiceImg1 from '../../images/dices/1small.gif';
 
 // import messages from './messages';
 
-function Dices() {
+function Dices(props) {
   return (
     <Wrapper>
       <section>
-        <Btn>Roll</Btn>
+        <Btn onClick={props.onClickBtn}>Roll</Btn>
         <NormalImg src={DiceImg1} alt="1" />
         <NormalImg className="margin-left-2p" src={DiceImg1} alt="1" />
       </section>
     </Wrapper>
   );
 }
+
+Dices.propTypes = {
+  onClickBtn: PropTypes.any,
+};
 
 export default Dices;

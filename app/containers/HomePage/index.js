@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
@@ -27,7 +27,7 @@ import CenteredSection from './CenteredSection';
 import Section from './Section';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
-import { changeUsername } from './actions';
+import { changeUsername, rollDicesSimulator } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
@@ -69,7 +69,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             <ScoreTable></ScoreTable>
           </Section>
           <Section>
-            <Dices></Dices>
+            <Dices onClickBtn={this.props.onRollDicesSimulator}></Dices>
           </Section>
           {/* <Section>
             <H2>
@@ -113,9 +113,14 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 //   onChangeUsername: PropTypes.func,
 // };
 
+HomePage.propTypes = {
+  onRollDicesSimulator: PropTypes.func,
+};
+
 export function mapDispatchToProps(dispatch) {
   return {
     onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
+    onRollDicesSimulator: (evt) => dispatch(rollDicesSimulator(evt.target.value)),
     onSubmitForm: (evt) => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       dispatch(loadRepos());

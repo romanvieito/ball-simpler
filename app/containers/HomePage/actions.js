@@ -17,6 +17,7 @@
 
 import {
   CHANGE_USERNAME,
+  CHANGE_DICENUMBER,
 } from './constants';
 
 /**
@@ -30,5 +31,19 @@ export function changeUsername(name) {
   return {
     type: CHANGE_USERNAME,
     name,
+  };
+}
+
+/**
+ * Changes the dice number
+ *
+ * @return {object}    An action object with a random number
+ */
+export function rollDicesSimulator() {
+  const randomNum = Math.ceil(Math.random() * 6);
+  console.log(randomNum);
+  return {
+    type: CHANGE_DICENUMBER,
+    randomNum,
   };
 }
