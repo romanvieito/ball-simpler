@@ -22,6 +22,8 @@ function Dices(props) {
   return (
     <Wrapper>
       <section>
+        <p>{props.value}</p>
+
         <Btn onClick={props.onClickBtn}>Roll</Btn>
         <NormalImg src={DiceImg1} alt="1" />
         <NormalImg className="margin-left-2p" src={DiceImg1} alt="1" />
@@ -31,7 +33,8 @@ function Dices(props) {
 }
 
 Dices.propTypes = {
-  onClickBtn: PropTypes.any,
+  onClickBtn: PropTypes.func,
+  value: PropTypes.number,
 };
 
 export default Dices;

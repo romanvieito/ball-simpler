@@ -11,7 +11,13 @@ const makeSelectUsername = () => createSelector(
   (homeState) => homeState.get('username')
 );
 
+const makeSelectNumber = () => createSelector(
+  selectHome,
+  (homeState) => homeState.get('dicenumber')
+);
+
 export {
   selectHome,
   makeSelectUsername,
+  makeSelectNumber,
 };

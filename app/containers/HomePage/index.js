@@ -28,7 +28,7 @@ import Section from './Section';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
 import { changeUsername, rollDicesSimulator } from './actions';
-import { makeSelectUsername } from './selectors';
+import { makeSelectUsername, makeSelectNumber } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
@@ -49,7 +49,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     //   error,
     //   repos,
     // };
-
     return (
       <article>
         <Helmet>
@@ -69,7 +68,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             <ScoreTable></ScoreTable>
           </Section>
           <Section>
-            <Dices onClickBtn={this.props.onRollDicesSimulator}></Dices>
+            <Dices value={this.props.dicenumber} onClickBtn={this.props.onRollDicesSimulator}></Dices>
           </Section>
           {/* <Section>
             <H2>
@@ -109,12 +108,14 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 //     PropTypes.bool,
 //   ]),
 //   onSubmitForm: PropTypes.func,
+//   dicenumber: PropTypes.string,
 //   username: PropTypes.string,
 //   onChangeUsername: PropTypes.func,
 // };
 
 HomePage.propTypes = {
-  onRollDicesSimulator: PropTypes.func,
+  dicenumber: PropTypes.number.isRequired,
+  onRollDicesSimulator: PropTypes.func.isRequired,
 };
 
 export function mapDispatchToProps(dispatch) {
@@ -131,6 +132,7 @@ export function mapDispatchToProps(dispatch) {
 const mapStateToProps = createStructuredSelector({
   repos: makeSelectRepos(),
   username: makeSelectUsername(),
+  dicenumber: makeSelectNumber(),
   loading: makeSelectLoading(),
   error: makeSelectError(),
 });
