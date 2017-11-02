@@ -40,10 +40,13 @@ export function changeUsername(name) {
  * @return {object}    An action object with a random number
  */
 export function rollDicesSimulator() {
-  const randomNum = Math.ceil(Math.random() * 6);
-  console.log(randomNum);
+  const randomNum1 = Math.ceil(Math.random() * 6);
+  const randomNum2 = Math.ceil(Math.random() * 6);
   return {
     type: CHANGE_DICENUMBER,
-    randomNum,
+    data: {
+      randomNum1,
+      randomNum2,
+    },
   };
 }

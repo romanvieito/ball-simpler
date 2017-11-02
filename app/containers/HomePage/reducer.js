@@ -19,7 +19,8 @@ import {
 // The initial state of the App
 const initialState = fromJS({
   username: '',
-  dicenumber: 2,
+  dicenumber1: 1,
+  dicenumber2: 1,
 });
 
 function homeReducer(state = initialState, action) {
@@ -33,7 +34,8 @@ function homeReducer(state = initialState, action) {
 
       // CHANGE_DICENUMBER
       return state
-        .set('dicenumber', action.randomNum);
+        .set('dicenumber1', action.data.randomNum1)
+        .set('dicenumber2', action.data.randomNum2);
 
     default:
       return state;

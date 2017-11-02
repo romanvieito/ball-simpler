@@ -28,7 +28,7 @@ import Section from './Section';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
 import { changeUsername, rollDicesSimulator } from './actions';
-import { makeSelectUsername, makeSelectNumber } from './selectors';
+import { makeSelectUsername, makeSelectNumber, makeSelectNumber2 } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
@@ -68,7 +68,8 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             <ScoreTable></ScoreTable>
           </Section>
           <Section>
-            <Dices value={this.props.dicenumber} onClickBtn={this.props.onRollDicesSimulator}></Dices>
+            <Dices value={this.props.dicenumber1} value2={this.props.dicenumber2} onClickBtn={this.props.onRollDicesSimulator}></Dices>
+            {/* <Dices className="pull-right" value={this.props.dicenumber2} onClickBtn={this.props.onRollDicesSimulator2}></Dices> */}
           </Section>
           {/* <Section>
             <H2>
@@ -114,7 +115,8 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 // };
 
 HomePage.propTypes = {
-  dicenumber: PropTypes.number.isRequired,
+  dicenumber1: PropTypes.number.isRequired,
+  dicenumber2: PropTypes.number,
   onRollDicesSimulator: PropTypes.func.isRequired,
 };
 
@@ -132,7 +134,8 @@ export function mapDispatchToProps(dispatch) {
 const mapStateToProps = createStructuredSelector({
   repos: makeSelectRepos(),
   username: makeSelectUsername(),
-  dicenumber: makeSelectNumber(),
+  dicenumber1: makeSelectNumber(),
+  dicenumber2: makeSelectNumber2(),
   loading: makeSelectLoading(),
   error: makeSelectError(),
 });
