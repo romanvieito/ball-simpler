@@ -8,6 +8,9 @@ import { Helmet } from 'react-helmet';
 
 import Img from 'components/Img';
 import Player from '../../images/players/1.png';
+import Player2 from '../../images/players/2.png';
+
+import './play.css';
 
 export default class FeaturePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -24,25 +27,39 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
           <title>Feature Page</title>
           <meta name="description" content="Feature page of React.js Boilerplate application" />
         </Helmet>
-        PLAY
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-12">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-6">
+              <div className="player">
+                <Img src={Player} alt="Player" />
+              </div>
+              <div className="player">
+                <Img src={Player} alt="Player" />
+              </div><div className="player">
+                <Img src={Player} alt="Player" />
+              </div><div className="player">
                 <Img src={Player} alt="Player" />
               </div>
             </div>
-            <div className="row">
-              <div className="col-4">
-                lkj
-              </div>
-              <div className="col-4">
-                lkj
-              </div>
-              <div className="col-4">
-                lkj
-              </div>
+            <div className="col-6">
+              <Img src={Player2} alt="Player" />
+              <Img src={Player2} alt="Player" />
+              <Img src={Player2} alt="Player" />
+              <Img src={Player2} alt="Player" />
             </div>
           </div>
+          <div className="row">
+            <div className="col-4">
+              ...
+              </div>
+            <div className="col-4">
+              ...
+              </div>
+            <div className="col-4">
+              ...
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
