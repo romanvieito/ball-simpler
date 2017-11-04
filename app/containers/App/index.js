@@ -15,7 +15,7 @@ import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import HelpPage from 'containers/HelpPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import Header from 'components/Header';
+// import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 const AppWrapper = styled.div`
@@ -36,10 +36,9 @@ export default function App() {
       >
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
-      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/features" component={FeaturePage} />
+        <Route path="/play" component={FeaturePage} />
         <Route path="/help" component={HelpPage} />
         <Route path="" component={NotFoundPage} />
       </Switch>

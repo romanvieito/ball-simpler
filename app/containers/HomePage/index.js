@@ -12,6 +12,8 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
+import Header from 'components/Header';
+
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
@@ -55,6 +57,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <title>Home Page</title>
           <meta name="description" content="A React.js Boilerplate application homepage" />
         </Helmet>
+        <Header />
         <div>
           <CenteredSection>
             <H2>

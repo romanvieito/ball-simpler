@@ -5,10 +5,10 @@
  */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 
 import H1 from 'components/H1';
-import messages from './messages';
+// import messages from './messages';
 import List from './List';
 
 export default class FeaturePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -27,10 +27,11 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
           <meta name="description" content="Feature page of React.js Boilerplate application" />
         </Helmet>
         <H1>
-          <FormattedMessage {...messages.header} />
+          {/* <FormattedMessage {...messages.header} /> */}
+          PLAY
         </H1>
         <List>
-
+          asdf
         </List>
       </div>
     );
