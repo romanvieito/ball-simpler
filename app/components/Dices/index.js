@@ -38,7 +38,7 @@ function Dices(props) {
           { props.value2 === 5 ? <NormalImg src={DiceImg5} alt={props.value.toString()} /> : null }
           { props.value2 === 6 ? <NormalImg src={DiceImg6} alt={props.value.toString()} /> : null }
         </div>
-        <Btn onClick={props.onClickBtn}>Roll</Btn>
+        <Btn onClick={props.onClickBtn}>Go</Btn>
       </section>
     </Wrapper>
   );
