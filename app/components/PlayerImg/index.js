@@ -8,7 +8,7 @@ import './player.css';
 function PlayerImg(prop) {
   return (
     <div className="player">
-      <Img src={prop.imgSource} alt="Player" />
+      <Img className="img-fluid" src={prop.imgSource} alt="Player" />
     </div>
   );
 }

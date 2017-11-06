@@ -30,20 +30,30 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
         <div className="container-fluid">
           <div className="row">
             <div className="col-6">
-              <ImgPlayer imgSource={Player}></ImgPlayer>
-              <ImgPlayer imgSource={Player}></ImgPlayer>
-              <ImgPlayer imgSource={Player}></ImgPlayer>
-              <ImgPlayer imgSource={Player}></ImgPlayer>
-              <ImgPlayer imgSource={Player}></ImgPlayer>
-              <ImgPlayer imgSource={Player}></ImgPlayer>
+              <div className="row">
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+                <ImgPlayer imgSource={Player}></ImgPlayer>
+              </div>
             </div>
             <div className="col-6">
-              <ImgPlayer imgSource={Player2}></ImgPlayer>
-              <ImgPlayer imgSource={Player2}></ImgPlayer>
-              <ImgPlayer imgSource={Player2}></ImgPlayer>
-              <ImgPlayer imgSource={Player2}></ImgPlayer>
-              <ImgPlayer imgSource={Player2}></ImgPlayer>
-              <ImgPlayer imgSource={Player2}></ImgPlayer>
+              <div className="row">
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <ImgPlayer imgSource={Player2}></ImgPlayer>
+              </div>
             </div>
           </div>
           <br />

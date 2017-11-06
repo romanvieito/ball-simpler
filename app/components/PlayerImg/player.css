@@ -2,12 +2,13 @@ div.player:before{
     content: "";
     position: absolute;
     border-top: 1px solid #CCCCCC;
-    width: 78px;
+    width: 2em;
     transform: rotate(85deg);
-    transform-origin: 0% 0% 1110px;
-    margin-left: -6px;
+    transform-origin: 0% 0%;
+    margin-left: -0.1em;
 }
 
 div.player{
+    width: 2em;
     display:inline;
 }
