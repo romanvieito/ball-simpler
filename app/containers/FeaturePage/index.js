@@ -30,7 +30,7 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
         <div className="container-fluid">
           <div className="row">
             <div className="col-6">
-              <div className="row">
+              <div className="row teamHome">
                 <ImgPlayer imgSource={Player}></ImgPlayer>
                 <ImgPlayer imgSource={Player}></ImgPlayer>
                 <ImgPlayer imgSource={Player}></ImgPlayer>
@@ -43,7 +43,7 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
               </div>
             </div>
             <div className="col-6">
-              <div className="row">
+              <div className="row teamVisitor">
                 <ImgPlayer imgSource={Player2}></ImgPlayer>
                 <ImgPlayer imgSource={Player2}></ImgPlayer>
                 <ImgPlayer imgSource={Player2}></ImgPlayer>
