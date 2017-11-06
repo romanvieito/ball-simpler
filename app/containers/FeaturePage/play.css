@@ -15,5 +15,23 @@ div.teamVisitor div.player:before{
     width: 2em;
     transform: rotate(95deg);
     transform-origin: 0% 0%;
-    margin-left: 0.1em;
+    margin-left: 0.2em;
 }
+
+div.teamHome div.color{
+    -webkit-transform: skew(5deg);
+    -moz-transform: skew(5deg);
+    -ms-transform: skew(5deg);
+    -o-transform: skew(5deg);
+    transform: skew(5deg);
+}
+
+div.teamVisitor div.color{
+    margin-right: -0.2em;
+    -webkit-transform: skew(175deg);
+    -moz-transform: skew(175deg);
+    -ms-transform: skew(175deg);
+    -o-transform: skew(175deg);
+    transform: skew(175deg);
+}
+

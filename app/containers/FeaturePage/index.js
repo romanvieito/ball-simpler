@@ -7,8 +7,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import ImgPlayer from 'components/PlayerImg';
+import RunQty from 'components/TopRunQty';
 import Player from '../../images/players/1.png';
 import Player2 from '../../images/players/2.png';
+import Player3 from '../../images/players/3.svg';
 
 import './play.css';
 
@@ -40,11 +42,13 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
                 <ImgPlayer imgSource={Player}></ImgPlayer>
                 <ImgPlayer imgSource={Player}></ImgPlayer>
                 <ImgPlayer imgSource={Player}></ImgPlayer>
+                <RunQty score="5"></RunQty>
               </div>
             </div>
             <div className="col-6">
               <div className="row teamVisitor">
-                <ImgPlayer imgSource={Player2}></ImgPlayer>
+                <RunQty score="3"></RunQty>
+                <ImgPlayer imgSource={Player3}></ImgPlayer>
                 <ImgPlayer imgSource={Player2}></ImgPlayer>
                 <ImgPlayer imgSource={Player2}></ImgPlayer>
                 <ImgPlayer imgSource={Player2}></ImgPlayer>
