@@ -27,7 +27,7 @@ div.teamHome div.color{
 }
 
 div.teamVisitor div.color{
-    margin-right: -0.2em;
+    margin-right: -0.19em;
     -webkit-transform: skew(175deg);
     -moz-transform: skew(175deg);
     -ms-transform: skew(175deg);

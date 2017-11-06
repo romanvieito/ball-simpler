@@ -12,7 +12,7 @@ function OutQty(prop) {
 }
 
 OutQty.propTypes = {
-  outs: PropTypes.number,
+  outs: PropTypes.string,
 };
 
 export default OutQty;
