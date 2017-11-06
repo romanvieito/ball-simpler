@@ -8,11 +8,12 @@ import { Helmet } from 'react-helmet';
 
 import ImgPlayer from 'components/PlayerImg';
 import RunQty from 'components/TopRunQty';
+import OutQty from 'components/TopOutQty';
 import Player from '../../images/players/1.png';
 import Player2 from '../../images/players/2.png';
 import Player3 from '../../images/players/3.svg';
 
-import './play.css';
+import './playBall.css';
 
 export default class FeaturePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -43,6 +44,7 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
                 <ImgPlayer imgSource={Player}></ImgPlayer>
                 <ImgPlayer imgSource={Player}></ImgPlayer>
                 <RunQty score="5"></RunQty>
+                <OutQty outs="2"></OutQty>
               </div>
             </div>
             <div className="col-6">

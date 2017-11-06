@@ -1,0 +1,12 @@
+div.color{
+    background-color: #7C7C7C;
+    color: white;
+    text-align: center;
+
+    border-top: 1px solid #CCCCCC;
+    width: 2em;
+    transform-origin: 0% 0%;
+    margin-left: -0.1em;
+
+    padding-top: 0.4em;
+}
