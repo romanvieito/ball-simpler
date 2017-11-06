@@ -6,7 +6,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Img from 'components/Img';
+import ImgPlayer from 'components/PlayerImg';
 import Player from '../../images/players/1.png';
 import Player2 from '../../images/players/2.png';
 
@@ -30,24 +30,23 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
         <div className="container-fluid">
           <div className="row">
             <div className="col-6">
-              <div className="player">
-                <Img src={Player} alt="Player" />
-              </div>
-              <div className="player">
-                <Img src={Player} alt="Player" />
-              </div><div className="player">
-                <Img src={Player} alt="Player" />
-              </div><div className="player">
-                <Img src={Player} alt="Player" />
-              </div>
+              <ImgPlayer imgSource={Player}></ImgPlayer>
+              <ImgPlayer imgSource={Player}></ImgPlayer>
+              <ImgPlayer imgSource={Player}></ImgPlayer>
+              <ImgPlayer imgSource={Player}></ImgPlayer>
+              <ImgPlayer imgSource={Player}></ImgPlayer>
+              <ImgPlayer imgSource={Player}></ImgPlayer>
             </div>
             <div className="col-6">
-              <Img src={Player2} alt="Player" />
-              <Img src={Player2} alt="Player" />
-              <Img src={Player2} alt="Player" />
-              <Img src={Player2} alt="Player" />
+              <ImgPlayer imgSource={Player2}></ImgPlayer>
+              <ImgPlayer imgSource={Player2}></ImgPlayer>
+              <ImgPlayer imgSource={Player2}></ImgPlayer>
+              <ImgPlayer imgSource={Player2}></ImgPlayer>
+              <ImgPlayer imgSource={Player2}></ImgPlayer>
+              <ImgPlayer imgSource={Player2}></ImgPlayer>
             </div>
           </div>
+          <br />
           <div className="row">
             <div className="col-4">
               ...
