@@ -35,3 +35,13 @@ div.teamVisitor div.color{
     transform: skew(175deg);
 }
 
+div.back-color {
+    padding-top: 1em;
+    padding-bottom: 30em;
+}
+
+/*TODO Move to the main component*/
+div#app {
+    background-color: #E4E4E4;
+}
+
