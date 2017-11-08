@@ -10,6 +10,7 @@ import ImgPlayer from 'components/PlayerImg';
 import RunQty from 'components/TopRunQty';
 import OutQty from 'components/TopOutQty';
 import CenterBoard from 'components/CenterBoard';
+import HitterList from 'components/HitterList';
 import Player from '../../images/players/1.png';
 import Player2 from '../../images/players/2.png';
 import Player3 from '../../images/players/3.svg';
@@ -66,13 +67,13 @@ export default class FeaturePage extends React.Component { // eslint-disable-lin
           <br />
           <div className="row">
             <div className="col-4">
-              ...
-              </div>
+              <HitterList></HitterList>
+            </div>
             <div className="col-4">
               <CenterBoard></CenterBoard>
             </div>
             <div className="col-4">
-              ...
+              <HitterList></HitterList>
             </div>
           </div>
         </div>
