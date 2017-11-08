@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Score from './Score';
 import './score.css';
 
 function ScoreTable() {
@@ -10,7 +9,7 @@ function ScoreTable() {
         <div className="innings">
           <table className="table table-sm">
             <thead>
-              <tr>
+              <tr className="green-color">
                 <th scope="col">FINAL</th>
                 <th scope="col">1</th>
                 <th scope="col">2</th>
@@ -52,29 +51,27 @@ function ScoreTable() {
           </table>
         </div>
         <div className="scores">
-          <Score>
-            <table className="table table-sm">
-              <thead>
-                <tr>
-                  <th scope="col">R</th>
-                  <th scope="col">H</th>
-                  <th scope="col">E</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">0</th>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <th scope="row">0</th>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-              </tbody>
-            </table>
-          </Score>
+          <table className="table table-sm">
+            <thead>
+              <tr className="green-color">
+                <th scope="col">R</th>
+                <th scope="col">H</th>
+                <th scope="col">E</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">0</th>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">0</th>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -82,7 +79,8 @@ function ScoreTable() {
 }
 
 const divStyle = {
-  paddingTop: '1em',
+  marginTop: '1em',
+  backgroundColor: 'white',
 };
 
 export default ScoreTable;
