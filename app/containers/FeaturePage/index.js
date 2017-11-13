@@ -21,6 +21,7 @@ import OutQty from 'components/TopOutQty';
 import CenterBoard from 'components/CenterBoard';
 import ScoreTable from 'components/ScoreTable';
 import HitterList from 'components/HitterList';
+import ShowOnBases from 'components/ShowOnBases';
 import Dices from 'components/Dices';
 import Player from '../../images/players/1.png';
 import Player2 from '../../images/players/2.png';
@@ -84,6 +85,7 @@ export class FeaturePage extends React.Component { // eslint-disable-line react/
           <div className="row">
             <div className="col-4">
               <HitterList></HitterList>
+              <ShowOnBases></ShowOnBases>
             </div>
             <div className="col-4">
               <CenterBoard></CenterBoard>
