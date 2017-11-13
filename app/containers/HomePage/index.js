@@ -67,13 +67,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
               <FormattedMessage {...messages.mainDescription} />
             </p>
           </CenteredSection>
-          <Section>
-            <ScoreTable></ScoreTable>
-          </Section>
-          <Section>
-            <Dices value={this.props.dicenumber1} value2={this.props.dicenumber2} onClickBtn={this.props.onRollDicesSimulator}></Dices>
-            {/* <Dices className="pull-right" value={this.props.dicenumber2} onClickBtn={this.props.onRollDicesSimulator2}></Dices> */}
-          </Section>
           {/* <Section>
             <H2>
               <FormattedMessage {...messages.trymeHeader} />
