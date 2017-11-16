@@ -9,6 +9,7 @@ import {
 const initialState = fromJS({
   dicenumber1: 1,
   dicenumber2: 1,
+  bases: [false, false, false],
 });
 
 function playReducer(state = initialState, action) {
@@ -18,7 +19,8 @@ function playReducer(state = initialState, action) {
       // CHANGE_RANDOM_DICENUMBER
       return state
         .set('dicenumber1', action.data.randomNum1)
-        .set('dicenumber2', action.data.randomNum2);
+        .set('dicenumber2', action.data.randomNum2)
+        .set('bases', action.data.bases);
 
     default:
       return state;

@@ -28,7 +28,7 @@ import Player2 from '../../images/players/2.png';
 import Player3 from '../../images/players/3.svg';
 
 import { rollDicesSimulator } from './actions';
-import { makeSelectRandomNumber, makeSelectRandomNumber2 } from './selectors';
+import { makeSelectRandomNumber, makeSelectRandomNumber2, bases } from './selectors';
 
 import reducer from './reducer';
 
@@ -85,7 +85,7 @@ export class FeaturePage extends React.Component { // eslint-disable-line react/
           <div className="row">
             <div className="col-4">
               <HitterList></HitterList>
-              <ShowOnBases></ShowOnBases>
+              <ShowOnBases bases={this.props.bases}></ShowOnBases>
             </div>
             <div className="col-4">
               <CenterBoard></CenterBoard>
@@ -105,6 +105,7 @@ export class FeaturePage extends React.Component { // eslint-disable-line react/
 FeaturePage.propTypes = {
   dicenumber1: PropTypes.number.isRequired,
   dicenumber2: PropTypes.number,
+  bases: PropTypes.any,
   onRollDicesSimulator: PropTypes.func.isRequired,
 };
 
@@ -117,6 +118,7 @@ export function mapDispatchToProps(dispatch) {
 const mapStateToProps = createStructuredSelector({
   dicenumber1: makeSelectRandomNumber(),
   dicenumber2: makeSelectRandomNumber2(),
+  bases: bases(),
   loading: makeSelectLoading(),
   error: makeSelectError(),
 });

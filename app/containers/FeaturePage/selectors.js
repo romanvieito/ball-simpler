@@ -16,8 +16,14 @@ const makeSelectRandomNumber2 = () => createSelector(
   (playState) => playState.get('dicenumber2')
 );
 
+const bases = () => createSelector(
+  selectPlay,
+  (playState) => playState.get('bases')
+);
+
 export {
   selectPlay,
   makeSelectRandomNumber,
   makeSelectRandomNumber2,
+  bases,
 };

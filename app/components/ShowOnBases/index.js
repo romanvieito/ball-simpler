@@ -5,6 +5,8 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+
 // import styled from 'styled-components';
 
 import './component.css';
@@ -12,7 +14,7 @@ import './component.css';
 // import { FormattedMessage } from 'react-intl';
 // import messages from './messages';
 
-function ShowOnBases() {
+function ShowOnBases(props) {
   return (
     <div className="comp-back-color">
       {/* <FormattedMessage {...messages.header} /> */}
@@ -23,7 +25,13 @@ function ShowOnBases() {
           </tr>
           <tr>
             <td>HOU</td>
-            <td rowSpan="2"></td>
+            <td rowSpan="2">
+              <div>
+                {props.bases[0] ? <div className="rombo first on-base"></div> : <div className="rombo first"></div>}
+                {props.bases[1] ? <div className="rombo second on-base"></div> : <div className="rombo second"></div> }
+                {props.bases[2] ? <div className="rombo third on-base"></div> : <div className="rombo third"></div> }
+              </div>
+            </td>
           </tr>
           <tr>
             <td>LAD</td>
@@ -39,7 +47,7 @@ function ShowOnBases() {
 }
 
 ShowOnBases.propTypes = {
-
+  bases: PropTypes.any,
 };
 
 export default ShowOnBases;

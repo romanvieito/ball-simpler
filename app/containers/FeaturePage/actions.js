@@ -27,11 +27,13 @@ import {
 export function rollDicesSimulator() {
   const randomNum1 = Math.ceil(Math.random() * 6);
   const randomNum2 = Math.ceil(Math.random() * 6);
+  const bases = [true, true, false];
   return {
     type: CHANGE_RANDOM_DICENUMBER,
     data: {
       randomNum1,
       randomNum2,
+      bases,
     },
   };
 }
